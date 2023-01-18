@@ -131,11 +131,9 @@ const guessColumnsBlocks = (main, document) => {
         ancestor = ancestor.parentElement.closest('.dexter-FlexContainer-Items');
         keep = !ancestor || (ancestor.childElementCount < 2)
     } while (ancestor && keep);
-    if (keep) c.style.backgroundColor = 'red';
-    else c.style.backgroundColor = '';
     return keep;
   });
-  
+
   containers.forEach((container) => {
     if (container.closest('table') || container.querySelector('h1')) return; // exclude existing blocks or hero
     let columns = [...container.children];
