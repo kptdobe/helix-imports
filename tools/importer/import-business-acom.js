@@ -124,7 +124,7 @@ const handleVideos = (main, document, origin) => {
 };
 
 const guessColumnsBlocks = (main, document) => {
-  const containers = [...document.body.querySelectorAll('.dexter-FlexContainer-Items')].filter((c) => {
+  const containers = [...main.querySelectorAll('.dexter-FlexContainer-Items')].filter((c) => {
     if (c.childElementCount < 2) return false; // ignore empty containers and single element containers
     let ancestor = c, keep;
     do {
